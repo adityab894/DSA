@@ -1,0 +1,12 @@
+https://leetcode.com/problems/can-i-win/
+https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
+https://leetcode.com/problems/stickers-to-spell-word/
+https://leetcode.com/problems/shortest-path-visiting-all-nodes/
+https://leetcode.com/problems/smallest-sufficient-team/
+https://leetcode.com/problems/maximum-students-taking-exam/
+https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/
+https://leetcode.com/problems/minimum-cost-to-connect-two-groups-of-points/
+https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/
+https://leetcode.com/problems/distribute-repeating-integers/
+https://leetcode.com/problems/maximize-grid-happiness/
+https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
