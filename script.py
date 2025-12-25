@@ -3,8 +3,16 @@ import re
 
 BASE = "dp"
 
-def fname(title):
+def cpp_filename(title):
     return re.sub(r'[^a-zA-Z0-9]+', '_', title).strip('_') + ".cpp"
+
+def cpp_template(link):
+    return f"""// {link}
+
+class Solution {{
+public:
+}};
+"""
 
 DATA = {
     "1.Linear DP": [
@@ -92,6 +100,7 @@ DATA = {
         ("Paint House III","https://leetcode.com/problems/paint-house-iii/"),
         ("Count All Possible Routes","https://leetcode.com/problems/count-all-possible-routes/")
     ],
+
     "4.Interval DP": [
         ("Guess Number Higher or Lower II","https://leetcode.com/problems/guess-number-higher-or-lower-ii/"),
         ("Arithmetic Slices","https://leetcode.com/problems/arithmetic-slices/"),
@@ -270,20 +279,20 @@ DATA = {
         ("Largest Multiple of Three","https://leetcode.com/problems/largest-multiple-of-three/"),
         ("Minimum One Bit Operations to Make Integers Zero","https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/")
     ]
-
 }
 
 os.makedirs(BASE, exist_ok=True)
 
 for folder, problems in DATA.items():
-    path = os.path.join(BASE, folder)
-    os.makedirs(path, exist_ok=True)
+    folder_path = os.path.join(BASE, folder)
+    os.makedirs(folder_path, exist_ok=True)
 
-    with open(os.path.join(path, "README.md"), "w") as f:
+    with open(os.path.join(folder_path, "README.md"), "w") as readme:
         for _, link in problems:
-            f.write(link + "\n")
+            readme.write(link + "\n")
 
-    for name, _ in problems:
-        open(os.path.join(path, fname(name)), "w").close()
+    for title, link in problems:
+        with open(os.path.join(folder_path, cpp_filename(title)), "w") as cpp:
+            cpp.write(cpp_template(link))
 
-print("dp folder created with full structure exactly as specified.")
+print("All 16 DP folders with C++ templates generated successfully.")

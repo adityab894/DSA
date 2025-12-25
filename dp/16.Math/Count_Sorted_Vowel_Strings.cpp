@@ -1,0 +1,5 @@
+// https://leetcode.com/problems/count-sorted-vowel-strings/
+
+class Solution {
+public:
+};

@@ -1,0 +1,5 @@
+// https://leetcode.com/problems/minimum-cost-for-tickets/
+
+class Solution {
+public:
+};
